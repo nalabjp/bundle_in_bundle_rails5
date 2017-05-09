@@ -1,0 +1,18 @@
+language: ruby
+before_install:
+  - gem install bundler -v '1.13.7'
+  - gem install bundler -v '1.14.6'
+cache:
+  - bundler
+rvm:
+  - 2.3.4
+  - 2.4.1
+script:
+  - bundle _1.13.7_ exec rake bib:rake
+  - bundle _1.13.7_ exec rake bib:rails
+  - bundle _1.13.7_ exec rails bib:rake
+  - bundle _1.13.7_ exec rails bib:rails
+  - bundle _1.14.6_ exec rake bib:rake
+  - bundle _1.14.6_ exec rake bib:rails
+  - bundle _1.14.6_ exec rails bib:rake
+  - bundle _1.14.6_ exec rails bib:rails
